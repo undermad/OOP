@@ -1,3 +1,5 @@
+import Stopwatch.Stopwatch;
+
 public class Main {
     public static void main(String[] args) {
         Paint paint = new Paint();
@@ -6,6 +8,9 @@ public class Main {
         paint.draw();
 
 
-
+        Stopwatch stopwatch = new Stopwatch();
+        stopwatch.click();
+        stopwatch.click();
+        stopwatch.click();
     }
 }

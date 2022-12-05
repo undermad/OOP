@@ -1,3 +1,8 @@
+import State.RainingWeather;
+import State.SunnyWeather;
+import State.Weather;
+import State.WeatherBehave;
+
 public class Main {
     public static void main(String[] args) {
         NPC_Behavior npcBehave = new NPC_Behavior();
@@ -14,5 +19,14 @@ public class Main {
         System.out.println("************************");
         npc.performBehavior();
         murloc.performBehavior();
+
+
+        WeatherBehave sunny = new SunnyWeather();
+        WeatherBehave raining = new RainingWeather();
+        Weather weather = new Weather(sunny);
+        weather.performWeather();
+        weather.setWeatherBehave(raining);
+        weather.performWeather();
+
     }
 }
