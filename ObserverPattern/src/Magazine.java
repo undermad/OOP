@@ -4,14 +4,19 @@ import java.util.Map;
 
 public class Magazine implements Observable {
     private final List<Observer> observers;
+    private final String name;
 
-    public Magazine() {
+    public Magazine(String name) {
         this.observers = new ArrayList<>();
+        this.name = name;
     }
 
+    @Override
     public void addObserver(Observer observer) {
         this.observers.add(observer);
     }
+
+    @Override
     public void removeObserver(Observer observer) {
         this.observers.remove(observer);
     }
@@ -25,6 +30,6 @@ public class Magazine implements Observable {
 
     @Override
     public String getObservableObjectName() {
-        return "Magazine";
+        return this.name;
     }
 }
