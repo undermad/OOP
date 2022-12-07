@@ -10,6 +10,9 @@ public class Main {
         magazine2.addObserver(american);
         magazine2.addObserver(american1);
 
+        american.unsubscribe(magazine);
+        american1.unsubscribe(magazine2);
+
 
         //this should  mainly happen in observable class
         magazine.notifyObservers();

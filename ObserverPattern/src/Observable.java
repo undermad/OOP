@@ -1,6 +1,6 @@
 public interface Observable {
     void notifyObservers();
     String getObservableObjectName();
-    public void addObserver(Observer observer);
-    public void removeObserver(Observer observer);
+    void addObserver(Observer observer);
+    void removeObserver(Observer observer);
 }
