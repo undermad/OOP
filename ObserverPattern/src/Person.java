@@ -12,13 +12,13 @@ public abstract class Person implements Observer {
         System.out.println(this.name + " age " + this.age + " updating from " + observable.getObservableObjectName());
     }
 
-    @Override
-    public void subscribe(Observable observable){
-        observable.addObserver(this);
-    }
+//    @Override
+//    public void subscribe(Observable observable){
+//        observable.addObserver(this);
+//    }
 
-    @Override
-    public void unsubscribe(Observable observable) {
-        observable.removeObserver(this);
-    }
+//    @Override
+//    public void unsubscribe(Observable observable) {
+//        observable.removeObserver(this);
+//    }
 }
