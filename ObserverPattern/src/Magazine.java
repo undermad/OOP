@@ -19,7 +19,12 @@ public class Magazine implements Observable {
     @Override
     public void notifyObservers() {
         observers.forEach(observer -> {
-            observer.update();
+            observer.update(this);
         });
+    }
+
+    @Override
+    public String getObservableObjectName() {
+        return "Magazine";
     }
 }

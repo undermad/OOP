@@ -8,7 +8,7 @@ public abstract class Person implements Observer {
     }
 
     @Override
-    public void update() {
-        System.out.println(this.name + " age " + this.age + " updating!");
+    public void update(Observable observable) {
+        System.out.println(this.name + " age " + this.age + " updating from " + observable.getObservableObjectName());
     }
 }
